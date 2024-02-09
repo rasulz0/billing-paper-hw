@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --sidebar-color: #F8F8FF;
+    --main-color : #EE4D38;
+    --background-color : #Fff;
+    --text-color : #62618F;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body,html{
+    min-height: 100dvh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    position: relative;
+}
+.sidebar{
+    background-color: var(--sidebar-color);
+    padding: 50px 16px;
+    height: 100vh;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.user-detail{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.user-title{
+    display: flex;
+    flex-direction: column;
+}
+.user-title .name{
+    font-size: 16px;
+    color: black;
+}
+.user-title .username{
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 14px;
+}
+.sidebar-nav{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.sidebar-nav .nav-item{
+    width: 100%;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar-nav .nav-item img{
+    width: 32px;
+    height: 32px;
+}
+.sidebar-nav .nav-item a{
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+.sidebar-bottom .logout-btn{
+    width: 100%;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar-bottom .logout-btn img{
+    width: 32px;
+    height: 32px;
+}
+.sidebar-bottom .logout-btn a{
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+.content{
+    padding: 72px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.content-left{
+    width: 70%;
+}
+.content-header{
+    font-size: 32px;
+    font-weight: 700;
+}
+.content-subheader{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 50px;
+    width: 100%;
+}
+.content-subheader h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+.content-subheader p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.history-table{
+    margin-top: 50px;
+    width:100%;
+}
+
+.history-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+}
+.history-header h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.history-content{
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+.history-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 15px;
+}
+.history-card:nth-child(2){
+    box-shadow: 0px 6px 34px -3px rgba(98,97,143,0.52);
+-webkit-box-shadow: 0px 6px 34px -3px rgba(98,97,143,0.52);
+-moz-box-shadow: 0px 6px 34px -3px rgba(98,97,143,0.52);
+}
+.history-card span{
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+.history-card button{
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #c3c3c3;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+}
+.load-more{
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 16px;
+    padding: 16px;
+}
+.payment-method{
+    margin-top: 80px;
+    width: 100%;
+}
+.payment-subheader{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 50px;
+}
+.payment-subheader h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+.payment-subheader p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.payment-card{
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment-card .logo{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #c3c3c3;
+}
+.payment-card p{
+    text-align: start;
+    width: 75%;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 16px;
+}
+.payment-card .payment-btn{
+    padding: 9px 0 9px 16px;
+}
+.payment-card .payment-btn button{
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #c3c3c3;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+
+
+.content-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+.ads-box{
+    background-color: var(--main-color);
+    padding: 32px;
+    display: inline;
+    min-height: 221px;
+    border-radius: 15px;
+    color: white;
+}
+.ads-box .ads-content{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.ads-box .ads-content h3{
+    font-size: 24px;
+}
+.ads-box button{
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 16px;
+    font-family: inherit;
+    color:white;
+    margin-top: 16px;
+}
