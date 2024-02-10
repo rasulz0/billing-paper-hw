@@ -79,6 +79,11 @@ body,html{
     font-size: 14px;
     font-weight: 400;
 }
+.options{
+    width: 32px;
+    height: 32px;
+    visibility: hidden;
+}
 .sidebar-bottom .logout-btn{
     width: 100%;
     padding: 8px 16px;
@@ -239,6 +244,21 @@ body,html{
     font-family: inherit;
 }
 
+.bottom-bar{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+    z-index: 3;
+    display: none;
+}
+.bottom-bar-main .navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
 
 
 .content-right{
@@ -273,4 +293,38 @@ body,html{
     font-family: inherit;
     color:white;
     margin-top: 16px;
+}
+
+
+@media only screen and (min-width: 1200px){
+
+}
+@media screen and (max-width: 992px){
+        .wrapper .sidebar{
+            display: none;
+        }
+        .content-right {
+            display: none;
+        }
+        .content .content-left{
+            width: 100%;
+        }
+        .wrapper .content{
+            width: 100%;
+            padding: 36px;
+        }
+        .bottom-bar {
+            display: block;
+        }
+}
+@media screen and (max-width: 768px){
+    .wrapper .sidebar{
+        visibility: hidden;
+    }
+    .content-right {
+        display: none;
+    }
+    .content .content-left{
+        width: 100%;
+    }
 }
